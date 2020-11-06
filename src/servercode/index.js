@@ -20,6 +20,9 @@ app.use(morgan('combined', { stream: accessLogStream }))
 
 require("./routes")(app);
 
+
+var PORT_CHECK = 8000
+
 app.listen(3000, "0.0.0.0", function (req,res) {
     logger.info("Server Started");
 });
